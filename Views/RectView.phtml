@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<title>Kontrolinis 2</title>
+<meta charset="utf-8" />
+<style type='text/css'>
+.rect {
+	border-style: solid;
+	border-width: 25px;
+	margin-left: 5px;
+	width: 250px;
+	height: 250px;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.title {
+	margin-top: 10px;	
+	font-size: 16pt;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+}
+.input {
+	margin-top: 30px;	
+	text-align: center;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+<?php foreach ($this->rectList as $id => $rect) { ?>
+	<div class='rect' style='border-color: <?php echo $rect->backColor ?>; background-color: <?php echo $rect->foreColor; ?>;'>
+		<div class='title'><?php echo $rect->title; ?></div>
+		<div class='input'><form><input type='<?php echo $rect->inputType; ?>'></form></div>
+	</div>
+<?php } ?>
+</body>
+</html>
+
+
